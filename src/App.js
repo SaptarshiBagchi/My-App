@@ -1,23 +1,29 @@
-import logo from "./logo.svg";
-import "./App.css";
-import { Button } from "react-bootstrap";
+import CardComponent from "./components/CardComponent";
+import { Container, Breadcrumb, Row, Col } from "react-bootstrap";
+import NavbarComponent from "./components/NavbarComponent";
+import { useState } from "react";
 
 function App() {
+  const [text, setText] = useState("");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Bagchi is here</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          To Own
-        </a>
-        <Button variant="primary">Primary</Button>{" "}
-      </header>
+    <div>
+      <NavbarComponent setText={setText} />
+      <Container className="mt-2">
+        <Row>
+          <Col sm={4}>
+            <Breadcrumb>
+              <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
+              <Breadcrumb.Item href="https://getbootstrap.com/docs/4.0/components/breadcrumb/">
+                Library
+              </Breadcrumb.Item>
+              <Breadcrumb.Item active>Data</Breadcrumb.Item>
+            </Breadcrumb>
+          </Col>
+        </Row>
+        <Row>
+          <p>{text}</p>
+        </Row>
+      </Container>
     </div>
   );
 }
