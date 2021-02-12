@@ -1,30 +1,15 @@
-import CardComponent from "./components/CardComponent";
-import { Container, Breadcrumb, Row, Col } from "react-bootstrap";
-import NavbarComponent from "./components/NavbarComponent";
 import { useState } from "react";
+import Join from "./components/Join/Join";
+import Chat from "./components/Chat/Chat";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {
   const [text, setText] = useState("");
   return (
-    <div>
-      <NavbarComponent setText={setText} />
-      <Container className="mt-2">
-        <Row>
-          <Col sm={4}>
-            <Breadcrumb>
-              <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
-              <Breadcrumb.Item href="https://getbootstrap.com/docs/4.0/components/breadcrumb/">
-                Library
-              </Breadcrumb.Item>
-              <Breadcrumb.Item active>Data</Breadcrumb.Item>
-            </Breadcrumb>
-          </Col>
-        </Row>
-        <Row>
-          <p>{text}</p>
-        </Row>
-      </Container>
-    </div>
+    <Router>
+      <Route path="/" exact component={Join} />
+      <Route path="/chat" component={Chat} />
+    </Router>
   );
 }
 
