@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import pp from "../../icons/pp.jpeg";
+import pp from "../../icons/pp.jpg";
 import "./Join.css";
 
 function Join() {
