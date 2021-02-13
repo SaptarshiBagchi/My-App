@@ -4,7 +4,6 @@ import Chat from "./components/Chat/Chat";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {
-  const [text, setText] = useState("");
   return (
     <Router>
       <Route path="/" exact component={Join} />
