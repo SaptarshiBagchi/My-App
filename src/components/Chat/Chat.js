@@ -9,8 +9,8 @@ import Input from "../Input/Input";
 
 import "./Chat.css";
 
-const ENDPOINT = "https://nibbis-react-app.herokuapp.com/";
-//const ENDPOINT = "192.168.0.106:5000";
+//const ENDPOINT = "https://nibbis-react-app.herokuapp.com/";
+const ENDPOINT = "192.168.0.106:5000";
 
 let socket;
 
