@@ -51,13 +51,6 @@ const Chat = ({ location }) => {
     });
   }, []);
 
-  useEffect(() => {
-    socket.on("room-message", message => {
-      console.log(message);
-      setMessages(messages => [...messages, message]);
-    });
-  }, []);
-
   const sendMessage = event => {
     event.preventDefault();
 

@@ -1,3 +1,4 @@
+
 .outerContainer {
     display: flex;
     justify-content: center;
@@ -6,7 +7,7 @@
     background-color: #1A1A1D;
   }
   
-  .container {
+  .container {    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -30,5 +31,7 @@
   @media (min-width: 480px) and (max-width: 1200px) {
     .container {
       width: 60%;
+      padding: 0;
     }
   }
+

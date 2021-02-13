@@ -1,11 +1,13 @@
 .textContainer {
     display: flex;
     flex-direction: column;
-    margin-left: 100px;
+    margin-left: 60px;
+    margin-right: 60px;
     color: white;
     height: 60%;
     justify-content: space-between;
   }
+  
   
   .activeContainer {
     display: flex;
