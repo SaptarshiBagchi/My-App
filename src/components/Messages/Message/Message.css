@@ -26,7 +26,15 @@
     justify-content: flex-end;
     padding: 0 5%;
     margin-top: 3px;
+    align-items: center;
   }
+
+.user-icon{
+  margin-right: 10px;
+}
+.incominguser-icon{
+  margin-left: 10px;
+}
   
   .sentText {
     margin-bottom: 0;
@@ -67,4 +75,8 @@
   
   .backgroundLight {
     background: #F3F3F3;
+  }
+
+  .mt-10{
+    margin-top: 10px;
   }
