@@ -1,11 +1,14 @@
 html, body {
-    font-family: 'Roboto', sans-serif;
+    
     padding: 0;
     margin: 0;
+    
   }
   
   #root {
     height: 100vh;
+    background-color: #1A1A1D;
+    font-family: 'Nunito', sans-serif;
   }
   
   * {
@@ -13,25 +16,37 @@ html, body {
   }
   
   .joinOuterContainer {
-    display: flex;
+    display: flex; 
+    flex-wrap: wrap;
     justify-content: center;
     text-align: center;
     height: 100vh;
     align-items: center;
-    background-color: #1A1A1D;
+   
   }
   
   .joinInnerContainer {
-    width: 20%;
+    margin-left: 20px;
+    width: 400px;
+  }
+
+  
+
+  .joinOuterContainer img{
+    border-radius: 50%;
   }
   
   .joinInput {
-    border-radius: 0;
+    font-family: 'Nunito', sans-serif;
+    border-radius: 20px;
     padding: 15px 20px;
     width: 100%;
   }
   
   .heading {
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    margin-bottom: 20px;
     color: white;
     font-size: 2.5em;
     padding-bottom: 10px;
@@ -39,12 +54,13 @@ html, body {
   }
   
   .button {
+    font-family: 'Nunito', sans-serif;
       color: #fff !important;
       text-transform: uppercase;
       text-decoration: none;
       background: #2979FF;
       padding: 20px;
-      border-radius: 5px;
+      border-radius: 25px;
       display: inline-block;
       border: none;
       width: 100%;
@@ -54,13 +70,16 @@ html, body {
     margin-top: 20px;
   }
   
-  @media (min-width: 320px) and (max-width: 480px) {
+  @media only screen and (max-width: 768px) {
     .joinOuterContainer {
-      height: 100%;
+      height: 90vh;
+      
+      
     }
   
     .joinInnerContainer {
       width: 90%;
+      margin-left: 0px;
     }
   
   

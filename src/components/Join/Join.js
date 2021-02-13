@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import pp from "../../icons/pp.jpeg";
 import "./Join.css";
 
 function Join() {
@@ -8,7 +9,8 @@ function Join() {
 
   return (
     <div className="joinOuterContainer">
-      <div className="joinInnerNameContainer">
+      <img src={pp} height="280px" width="280px" />
+      <div className="joinInnerContainer">
         <h1 className="heading">Join our Chat Room</h1>
         <div>
           <input
