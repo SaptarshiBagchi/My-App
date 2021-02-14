@@ -21,7 +21,7 @@ function Join() {
     setTaken(!taken);
     setLoading(!loading);
     if (process.env.NODE_ENV !== "development") {
-      ENDPOINT = "https://chat-server-klzzi.ondigitalocean.app/";
+      ENDPOINT = "https://chat-server-klzzi.ondigitalocean.app";
       console.log(process.env.NODE_ENV);
     } else {
       ENDPOINT = "http://192.168.0.106:5000";
