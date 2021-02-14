@@ -15,8 +15,8 @@ function Join() {
 
   const submitForm = e => {
     e.preventDefault();
-    if (name.trim().length == 0) {
-      return alert("Please enter a username");
+    if (name.trim().length === 0 || room.trim().length() === 0) {
+      return alert("Something needs to be entered");
     }
     setTaken(!taken);
     setLoading(!loading);
@@ -28,7 +28,7 @@ function Join() {
       console.log(process.env.NODE_ENV);
     }
 
-    ENDPOINT += "/getusernameavailable?name=" + name;
+    ENDPOINT += "/getusernameavailable?name=" + name + "&room=" + room;
     console.log("Initiating API call" + ENDPOINT);
     fetch(ENDPOINT)
       // .then(res => res.json())
@@ -37,7 +37,8 @@ function Join() {
           setLoading(false);
           console.log(result.status);
           if (result.status === 200) {
-            setLoading(!loading);
+            setLoading(false);
+            setTaken(false);
             console.log(result);
             history.push("/chat?name=" + name + "&&room=" + room);
           } else {
@@ -74,7 +75,8 @@ function Join() {
           ></input>
           {taken && (
             <p className="joinParagraph">
-              This username is taken, please try another
+              This username is taken inside this room, please try another
+              username or go into another room
             </p>
           )}
         </div>
