@@ -25,6 +25,7 @@ const Message = ({ message: { text, user }, name }) => {
         height="30px"
         width="30px"
         className="incominguser-icon"
+        alt={"Pikachu Trainer Icon"}
       />
     </div>
   ) : (
@@ -34,6 +35,7 @@ const Message = ({ message: { text, user }, name }) => {
         height="30px"
         width="30px"
         className="user-icon"
+        alt={"Pokemon Trainer Icon"}
       />
       <div className="messageBox backgroundLight">
         <p className="messageText colorDark">{ReactEmoji.emojify(text)}</p>

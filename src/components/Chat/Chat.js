@@ -10,11 +10,20 @@ import Input from "../Input/Input";
 import "./Chat.css";
 
 //const ENDPOINT = "https://nibbis-react-app.herokuapp.com/";
-const ENDPOINT = "https://chat-server-klzzi.ondigitalocean.app/";
+
+let ENDPOINT = "";
 
 let socket;
 
 const Chat = ({ location }) => {
+  if (process.env.NODE_ENV !== "development") {
+    ENDPOINT = "https://chat-server-klzzi.ondigitalocean.app/";
+    console.log(process.env.NODE_ENV);
+  } else {
+    ENDPOINT = "192.168.0.106:5000";
+    console.log(process.env.NODE_ENV);
+  }
+
   const [name, setName] = useState("");
   const [room, setRoom] = useState("");
   const [users, setUsers] = useState("");
@@ -44,7 +53,7 @@ const Chat = ({ location }) => {
         alert(error);
       }
     });
-  }, [ENDPOINT, location.search]);
+  }, [location.search]);
 
   useEffect(() => {
     socket.on("message", message => {

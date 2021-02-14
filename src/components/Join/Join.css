@@ -30,6 +30,10 @@ html, body {
     width: 400px;
   }
 
+  .center-loader{
+    margin: 0px auto;
+  }
+
   
 
   .joinOuterContainer img{
@@ -42,6 +46,11 @@ html, body {
     padding: 15px 20px;
     width: 100%;
   }
+  .joinParagraph{
+    margin:10px 20px;
+    text-align: left;
+    color : greenyellow;
+  }
   
   .heading {
     font-family: 'Nunito', sans-serif;
@@ -52,6 +61,7 @@ html, body {
     padding-bottom: 10px;
     border-bottom: 2px solid white;
   }
+
   
   .button {
     font-family: 'Nunito', sans-serif;
