@@ -18,7 +18,7 @@ function Join() {
     if (name.trim().length == 0 || room.trim().length == 0) {
       return alert("Something needs to be entered");
     }
-    setTaken(!taken);
+    setTaken(false);
     setLoading(!loading);
     if (process.env.NODE_ENV !== "development") {
       ENDPOINT = "https://chat-server-klzzi.ondigitalocean.app";
