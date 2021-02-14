@@ -15,7 +15,7 @@ function Join() {
 
   const submitForm = e => {
     e.preventDefault();
-    if (name.trim().length === 0 || room.trim().length() === 0) {
+    if (name.trim().length == 0 || room.trim().length == 0) {
       return alert("Something needs to be entered");
     }
     setTaken(!taken);
